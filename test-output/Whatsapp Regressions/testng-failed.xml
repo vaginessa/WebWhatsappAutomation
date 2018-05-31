@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Whatsapp Regressions]" parallel="tests">
+  <test name="Regressions(failed)" parallel="tests">
+    <classes>
+      <class name="com.webwhatsapptest.runner.Hook">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- com.webwhatsapptest.runner.Hook -->
+      <class name="com.webwhatsapptest.runner.Runner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- com.webwhatsapptest.runner.Runner -->
+    </classes>
+  </test> <!-- Regressions(failed) -->
+</suite> <!-- Failed suite [Whatsapp Regressions] -->
