@@ -3,6 +3,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Whatsapp Regressions" parallel="tests" verbose="1">
+<listeners>
+<listener class-name="com.webwhatsapptest.runner.Listener"></listener>
+</listeners>
 	<test name="Regressions">
 		<packages>
 			<package name="com.webwhatsapptest.runner.*" />
