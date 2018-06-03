@@ -1,5 +1,9 @@
 package com.webwhatsapptest.pages;
 
+/**
+ *@author H Sri Harsha
+ * This method contains methods related to Chats
+ */
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

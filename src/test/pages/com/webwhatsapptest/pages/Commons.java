@@ -1,5 +1,9 @@
 package com.webwhatsapptest.pages;
 
+/**
+ * @author H Sri Harsha
+ * This class contains methods which containd re-usable methods
+ */
 import org.openqa.selenium.By;
 import com.webwhatsapptest.runner.Hook;
 

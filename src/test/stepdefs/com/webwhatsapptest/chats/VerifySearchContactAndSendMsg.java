@@ -1,5 +1,10 @@
 package com.webwhatsapptest.chats;
 
+/**
+ * @author H Sri Harsha
+ * This class contains all the step defs related to VerifySearchContactAndSendMsg.feature
+ */
+
 import com.webwhatsapptest.pages.Chats;
 import com.webwhatsapptest.pages.Commons;
 import cucumber.api.java.en.Given;
