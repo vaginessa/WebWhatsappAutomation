@@ -2,7 +2,6 @@
 ##This feature is used check last seen
 Feature: Check last seen
 
-@Scenario1
 @VerifySearchAndSendMsg
 Scenario: Verify search contact and send message
 Given user is logged into whatsapp
