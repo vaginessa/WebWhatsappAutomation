@@ -1,5 +1,9 @@
 package com.webwhatsapptest.runner;
 
+/**
+ * @author H Sri Harsha
+ * This class implements ITestListener
+ */
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
