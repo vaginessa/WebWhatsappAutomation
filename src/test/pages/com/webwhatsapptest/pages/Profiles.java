@@ -7,15 +7,12 @@ import com.webwhatsapptest.runner.Hook;
 public class Profiles extends Hook {
 
   public void checkLastSeen() {
-    boolean flag = true;
     try {
       WebElement lastSeen = driver.findElement(By.xpath(getLocator("LastSeen")));
-      if (flag) {
-        System.out.println("Last seen status is displayed and is : " + lastSeen.getText());
-      }
+      System.out.println("Last seen status is displayed and is : " + lastSeen.getText());
     } catch (Exception ex) {
-      System.out.println("Last Seen not there.");
-      flag = false;
+      System.out.println("Last Seen not there");
+      return;
     }
   }
 }
