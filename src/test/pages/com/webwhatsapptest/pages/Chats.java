@@ -16,8 +16,7 @@ public class Chats extends Hook {
   private int messagesCountBeforeNewMessage;
   private int messagesCountAfterNewMessage;
 
-  public void sendMessage(String message) {
-
+  public void sendMessage(String message) throws InterruptedException {
     List<WebElement> messages = driver.findElements(By.xpath(getLocator("Messages")));
     messagesCountBeforeNewMessage = messages.size();
     driver.findElement(By.xpath(getLocator("MessageBox"))).sendKeys(message);
@@ -30,5 +29,6 @@ public class Chats extends Hook {
     } else {
       System.out.println("Message sending failed");
     }
+      Thread.sleep(15000); 
   }
 }
