@@ -26,8 +26,7 @@ public class Listener implements ITestListener {
   }
 
   public void onTestFailure(ITestResult arg0) {
-    System.out.println("Testcase failed");
-    
+    System.out.println("Testcase failed");    
   }
 
   public void onTestSkipped(ITestResult arg0) {

@@ -1,8 +1,7 @@
 package com.webwhatsapptest.pages;
 
 /**
- *@author H Sri Harsha
- * This class contains methods related to Chats
+ * @author H Sri Harsha This class contains methods related to Chats
  */
 import java.util.List;
 import org.openqa.selenium.By;
@@ -16,7 +15,7 @@ public class Chats extends Hook {
   private int messagesCountBeforeNewMessage;
   private int messagesCountAfterNewMessage;
 
-  public void sendMessage(String message) throws InterruptedException {
+  public void sendMessage(String message) {
     List<WebElement> messages = driver.findElements(By.xpath(getLocator("Messages")));
     messagesCountBeforeNewMessage = messages.size();
     driver.findElement(By.xpath(getLocator("MessageBox"))).sendKeys(message);
@@ -29,6 +28,5 @@ public class Chats extends Hook {
     } else {
       System.out.println("Message sending failed");
     }
-      Thread.sleep(15000); 
   }
 }

@@ -6,15 +6,16 @@ package com.webwhatsapptest.runner;
 
 import java.io.FileInputStream;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public class Hook {
 
   public static WebDriver driver;
+  public static WebDriverWait wait;
 
   /**
    * This method is used to initialize the webdriver
@@ -24,23 +25,9 @@ public class Hook {
   public void initialize() {
     System.setProperty("webdriver.chrome.driver",
         "F:\\Harsha_Software\\chromedriver\\chromedriver.exe");
-    // FirefoxOptions options = new FirefoxOptions();
-    // options.setProfile(getProfile("default"));
     driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    wait = new WebDriverWait(driver, 60);
   }
-
-  // /**
-  // * This method returns the profile for firefox
-  // * @param profileName
-  // * @return FirefoxProfile
-  // */
-  // private static FirefoxProfile getProfile(String profileName) {
-  // if (profileName == null || profileName.trim().isEmpty()) {
-  // return new FirefoxProfile();
-  // }
-  // return new ProfilesIni().getProfile(profileName);
-  // }
 
   /**
    * This method closes the browser

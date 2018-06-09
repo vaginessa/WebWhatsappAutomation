@@ -12,7 +12,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/features",
-    glue = {"classpath:com.webwhatsapptest.chats", "classpath:com.webwhatsapptest.profiles"})
+    glue = {"classpath:com.webwhatsapptest.chats", "classpath:com.webwhatsapptest.profiles","classpath:com.webwhatsapptest.contactinfo"})
 public class Runner extends AbstractTestNGCucumberTests {
 
 }
