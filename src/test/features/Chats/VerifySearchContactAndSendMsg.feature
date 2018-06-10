@@ -2,7 +2,6 @@
 ##This feature is used to search a contact and send a message in whatsapp.
 Feature: Verify search contact and send message.
 
-@Test
 @VerifySearchAndSendMsg
 Scenario: Verify search contact and send message
 Given user is logged into whatsapp

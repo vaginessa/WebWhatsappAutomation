@@ -23,9 +23,11 @@ public class Hook {
    */
   @BeforeTest
   public void initialize() {
-    System.setProperty("webdriver.chrome.driver",
-        "F:\\Harsha_Software\\chromedriver\\chromedriver.exe");
-    driver = new ChromeDriver();
+    String browserToTest = getConfig("browserToTest");
+    if (browserToTest.equals("chrome")) {
+      System.setProperty("webdriver.chrome.driver", getConfig("browserDriverLocation"));
+      driver = new ChromeDriver();
+    }
     wait = new WebDriverWait(driver, 60);
   }
 
@@ -51,5 +53,23 @@ public class Hook {
       e.printStackTrace();
     }
     return prop.getProperty(key);
+  }
+
+  /**
+   * This method returns the value of config properties value
+   * 
+   * @param config key
+   * @return value of config property value
+   * 
+   */
+
+  public String getConfig(String configkey) {
+    Properties prop = new Properties();
+    try {
+      prop.load(new FileInputStream("./src/test/resources/properties/config.properties"));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return prop.getProperty(configkey);
   }
 }
