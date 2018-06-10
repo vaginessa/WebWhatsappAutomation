@@ -3,7 +3,7 @@
 Feature: Check last seen
 
 @CheckLastSeen
-Scenario: Verify search contact and send message
+Scenario: Verify last seen
 Given user is logged into whatsapp
 When user searches for a contact "MY NUMBER"
 Then user chooses the contact "MY NUMBER"
