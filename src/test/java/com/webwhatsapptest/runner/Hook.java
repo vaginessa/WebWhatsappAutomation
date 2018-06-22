@@ -48,7 +48,7 @@ public class Hook {
   public String getLocator(String key) {
     Properties prop = new Properties();
     try {
-      prop.load(new FileInputStream("./src/test/resources/properties/Locator.properties"));
+      prop.load(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/Locator.properties"));
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -66,7 +66,7 @@ public class Hook {
   public String getConfig(String configkey) {
     Properties prop = new Properties();
     try {
-      prop.load(new FileInputStream("./src/test/resources/properties/config.properties"));
+      prop.load(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/config.properties"));
     } catch (Exception e) {
       e.printStackTrace();
     }
