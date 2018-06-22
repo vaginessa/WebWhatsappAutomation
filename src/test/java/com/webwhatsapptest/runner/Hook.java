@@ -21,7 +21,7 @@ public class Hook {
    * This method is used to initialize the webdriver
    * 
    */
-  @BeforeTest
+  @BeforeTest(alwaysRun=true)
   public void initialize() {
     String browserToTest = getConfig("browserToTest");
     if (browserToTest.equals("chrome")) {
@@ -34,7 +34,7 @@ public class Hook {
   /**
    * This method closes the browser
    */
-  @AfterTest
+  @AfterTest(alwaysRun=true)
   public void tearDown() {
     driver.quit();
   }
@@ -48,7 +48,8 @@ public class Hook {
   public String getLocator(String key) {
     Properties prop = new Properties();
     try {
-      prop.load(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/Locator.properties"));
+      prop.load(new FileInputStream(
+          System.getProperty("user.dir") + "/src/test/resources/properties/Locator.properties"));
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -66,7 +67,8 @@ public class Hook {
   public String getConfig(String configkey) {
     Properties prop = new Properties();
     try {
-      prop.load(new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/config.properties"));
+      prop.load(new FileInputStream(
+          System.getProperty("user.dir") + "/src/test/resources/properties/config.properties"));
     } catch (Exception e) {
       e.printStackTrace();
     }
