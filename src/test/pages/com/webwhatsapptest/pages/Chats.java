@@ -28,5 +28,11 @@ public class Chats extends Hook {
     } else {
       System.out.println("Message sending failed");
     }
+    //Below hard wait is to wait for some time after sending the message as pop up is appearing
+    try {
+      Thread.sleep(15000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
   }
 }
