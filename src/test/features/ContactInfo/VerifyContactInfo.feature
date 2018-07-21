@@ -1,6 +1,6 @@
 ##Author : H Sri Harsha
 ##This feature is used to verify that user is able to see contact info in whatsapp.
-Feature: Verify navigate to contact infoe.
+Feature: Verify navigate to contact info.
 
 @ContactInfo
 Scenario: Verify navigate to contact info
